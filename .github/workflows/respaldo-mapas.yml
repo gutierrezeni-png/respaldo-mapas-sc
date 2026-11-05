@@ -1,0 +1,73 @@
+# Respaldo en la nube de los mapas de lluvia y viento (Guerrero a Chiapas).
+#
+# Corre cada 30 minutos. Normalmente solo revisa si la PC de la oficina sigue
+# publicando la página (repositorio monitor-mapas-sc) y termina en espera.
+# Si la PC lleva más de 70 minutos sin publicar (apagada o sin internet),
+# la nube hace lo mismo que la PC: revisa NHC y modelo, genera los mapas
+# cuando hay cambios, los manda por ntfy y publica la página.
+#
+# Secrets necesarios (Settings > Secrets and variables > Actions):
+#   MAPAS_TOKEN : el token de config_github.json (para publicar en monitor-mapas-sc)
+#   NTFY_TEMA   : el tema de ntfy de los mapas
+# Variable opcional: MODO_ACTIVO = si  -> la nube publica aunque la PC esté encendida.
+
+name: Respaldo mapas lluvia y viento
+
+on:
+  schedule:
+    - cron: "17,47 * * * *"
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: "Generar los mapas ahora aunque la PC esté activa (prueba)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: respaldo-mapas
+  cancel-in-progress: false
+
+jobs:
+  mapas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      TZ: America/Mexico_City
+      MAPAS_SALIDA: estado
+      MPLBACKEND: Agg
+      NTFY_TEMA: ${{ secrets.NTFY_TEMA }}
+      MAPAS_TOKEN: ${{ secrets.MAPAS_TOKEN }}
+      MODO_ACTIVO: ${{ vars.MODO_ACTIVO }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar librerías
+        run: pip install -r requirements.txt
+
+      - name: Revisar y generar mapas
+        continue-on-error: true
+        run: python actualizar_mapas.py ${{ inputs.forzar && '--forzar' || '' }}
+
+      - name: Guardar estado (y latido semanal para que GitHub no pause el horario)
+        if: always()
+        run: |
+          mkdir -p estado
+          date +%G-semana-%V > estado/latido.txt
+          git config user.name "respaldo-mapas"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add estado/latido.txt
+          [ -f estado/estado.json ] && git add estado/estado.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios que guardar."
+          else
+            git commit -m "[nube] estado $(date '+%d/%m %H:%M')"
+            git push
+          fi
