@@ -10,7 +10,7 @@
    "p7": 60
   }
  ],
- "ultima_revision": "2026-11-04T20:42:00.632148",
+ "ultima_revision": "2026-11-04T21:30:41.664044",
  "resumen_actual": {
   "ciclones": {},
   "zonas": [
@@ -42,7 +42,7 @@
    }
   ]
  },
- "ultima_imagen": "2026-11-04T20:42:00.632148",
+ "ultima_imagen": "2026-11-04T21:30:41.664044",
  "motivo_imagen": "manual (--forzar)",
  "pendientes": [],
  "decision": "imágenes generadas · respaldo en la nube",
@@ -50,18 +50,22 @@
   {
    "fecha": "2026-11-04T20:42:00.632148",
    "motivo": "manual (--forzar)"
+  },
+  {
+   "fecha": "2026-11-04T21:30:41.664044",
+   "motivo": "manual (--forzar)"
   }
  ],
  "imagenes_web": {
   "lluvia": {
-   "src": "lluvia.jpg?v=202611042042",
-   "fecha": "2026-11-04T20:42:05.210347"
+   "src": "lluvia.jpg?v=202611042130",
+   "fecha": "2026-11-04T21:30:45.048369"
   },
   "viento": {
-   "src": "viento.jpg?v=202611042042",
-   "fecha": "2026-11-04T20:42:05.210370"
+   "src": "viento.jpg?v=202611042130",
+   "fecha": "2026-11-04T21:30:45.048392"
   }
  },
- "ultima_publicacion": "2026-11-04T20:42:05.214697",
+ "ultima_publicacion": "2026-11-04T21:30:45.052792",
  "web_tiene_mapas": true
 }
