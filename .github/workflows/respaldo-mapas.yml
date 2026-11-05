@@ -33,7 +33,7 @@ concurrency:
 jobs:
   mapas:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 45
     env:
       TZ: America/Mexico_City
       MAPAS_SALIDA: estado
