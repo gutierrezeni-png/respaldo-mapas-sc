@@ -105,6 +105,7 @@ PUBLICAR_GITHUB = True
 CONFIG_GITHUB = Path(r"D:\NIVEL DE PRESAS Y RIOS\config_github.json")   # se usan "usuario" y "token"
 GITHUB_REPO = "monitor-mapas-sc"     # repositorio público para esta página
 # Respaldo en la nube: entra solo cuando la PC lleva más de este tiempo sin publicar la página
+TIMEOUT_MODELO_S = 120 if EN_NUBE else 40   # desde GitHub, Open-Meteo tarda más en responder cada lote
 UMBRAL_PC_MIN = 70                   # la PC publica a lo más cada 30 min; 70 min sin hacerlo = PC caída o sin internet
 ETIQUETA_NUBE = "[nube]"             # prefijo de los commits que hace la nube (para distinguirlos de los de la PC)
 PUBLICAR_ESTADO_MIN = 30             # sin imágenes nuevas, el estado se publica a lo más cada 30 min        # tema de ntfy.sh para recibir los mapas ("" = no enviar)
@@ -564,7 +565,7 @@ def lluvia_modelo(lon_min, lon_max, lat_min, lat_max):
             latitude=",".join(f"{a:.2f}" for a, _ in lote),
             longitude=",".join(f"{b:.2f}" for _, b in lote),
             daily=variables, forecast_days=QPF_DIAS,
-            models=modelos, timezone=ZONA_HORARIA)).json()
+            models=modelos, timezone=ZONA_HORARIA), timeout=TIMEOUT_MODELO_S).json()
         if isinstance(r, dict):
             r = [r]
         for j, item in enumerate(r):
