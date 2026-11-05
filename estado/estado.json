@@ -1,0 +1,67 @@
+{
+ "two_lm": "Wed, 04 Nov 2026 23:33:13 GMT",
+ "zonas_v": 5,
+ "zonas": [
+  {
+   "lat": 8.6,
+   "lon": -90.6,
+   "n": "2",
+   "p2": 40,
+   "p7": 60
+  }
+ ],
+ "ultima_revision": "2026-11-04T20:42:00.632148",
+ "resumen_actual": {
+  "ciclones": {},
+  "zonas": [
+   {
+    "lat": 8.6,
+    "lon": -90.6,
+    "n": "2",
+    "p2": 40,
+    "p7": 60
+   }
+  ]
+ },
+ "huella_imagen": {
+  "nhc": [],
+  "zonas": [
+   "8.6|-90.6|40|60"
+  ],
+  "modelo": "1793815200"
+ },
+ "resumen_imagen": {
+  "ciclones": {},
+  "zonas": [
+   {
+    "lat": 8.6,
+    "lon": -90.6,
+    "n": "2",
+    "p2": 40,
+    "p7": 60
+   }
+  ]
+ },
+ "ultima_imagen": "2026-11-04T20:42:00.632148",
+ "motivo_imagen": "manual (--forzar)",
+ "pendientes": [],
+ "decision": "imágenes generadas · respaldo en la nube",
+ "historial": [
+  {
+   "fecha": "2026-11-04T20:42:00.632148",
+   "motivo": "manual (--forzar)"
+  }
+ ],
+ "imagenes_web": {
+  "lluvia": {
+   "src": "lluvia.jpg?v=202611042042",
+   "fecha": "2026-11-04T20:42:05.210347"
+  },
+  "viento": {
+   "src": "viento.jpg?v=202611042042",
+   "fecha": "2026-11-04T20:42:05.210370"
+  }
+ },
+ "ultima_publicacion": "2026-11-04T20:42:05.214697",
+ "web_tiene_mapas": true
+}
