@@ -1,8 +1,8 @@
 {
- "two_lm": "Sun, 15 Nov 2026 05:08:12 GMT",
+ "two_lm": "Sun, 15 Nov 2026 17:11:26 GMT",
  "zonas_v": 5,
  "zonas": [],
- "ultima_revision": "2026-11-15T04:00:07.442624",
+ "ultima_revision": "2026-11-15T11:16:33.468940",
  "resumen_actual": {
   "ciclones": {},
   "zonas": []
@@ -10,13 +10,13 @@
  "huella_imagen": {
   "nhc": [],
   "zonas": [],
-  "modelo": "1794700800"
+  "modelo": "1794722400"
  },
  "resumen_imagen": {
   "ciclones": {},
   "zonas": []
  },
- "ultima_imagen": "2026-11-15T04:00:07.442624",
+ "ultima_imagen": "2026-11-15T11:16:33.468940",
  "motivo_imagen": "cambios acumulados en 3 h: modelo",
  "pendientes": [],
  "decision": "imágenes generadas · respaldo en la nube",
@@ -40,18 +40,22 @@
   {
    "fecha": "2026-11-15T04:00:07.442624",
    "motivo": "cambios acumulados en 3 h: modelo"
+  },
+  {
+   "fecha": "2026-11-15T11:16:33.468940",
+   "motivo": "cambios acumulados en 3 h: modelo"
   }
  ],
  "imagenes_web": {
   "lluvia": {
-   "src": "lluvia.jpg?v=202611150400",
-   "fecha": "2026-11-15T04:00:11.737429"
+   "src": "lluvia.jpg?v=202611151116",
+   "fecha": "2026-11-15T11:16:37.799530"
   },
   "viento": {
-   "src": "viento.jpg?v=202611150400",
-   "fecha": "2026-11-15T04:00:11.737455"
+   "src": "viento.jpg?v=202611151116",
+   "fecha": "2026-11-15T11:16:37.799544"
   }
  },
- "ultima_publicacion": "2026-11-15T04:00:11.740827",
+ "ultima_publicacion": "2026-11-15T11:16:37.803057",
  "web_tiene_mapas": true
 }
