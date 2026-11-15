@@ -1,8 +1,8 @@
 {
- "two_lm": "Sat, 14 Nov 2026 23:31:39 GMT",
+ "two_lm": "Sun, 15 Nov 2026 05:08:12 GMT",
  "zonas_v": 5,
  "zonas": [],
- "ultima_revision": "2026-11-14T20:44:35.349869",
+ "ultima_revision": "2026-11-15T04:00:07.442624",
  "resumen_actual": {
   "ciclones": {},
   "zonas": []
@@ -10,16 +10,16 @@
  "huella_imagen": {
   "nhc": [],
   "zonas": [],
-  "modelo": "1794657600"
+  "modelo": "1794700800"
  },
  "resumen_imagen": {
   "ciclones": {},
   "zonas": []
  },
- "ultima_imagen": "2026-11-14T17:03:16.805360",
- "motivo_imagen": "CAMBIO SIGNIFICATIVO: una zona de baja presión dejó de afectar la jurisdicción",
+ "ultima_imagen": "2026-11-15T04:00:07.442624",
+ "motivo_imagen": "cambios acumulados en 3 h: modelo",
  "pendientes": [],
- "decision": "sin cambios · respaldo en la nube",
+ "decision": "imágenes generadas · respaldo en la nube",
  "historial": [
   {
    "fecha": "2026-11-04T20:42:00.632148",
@@ -36,18 +36,22 @@
   {
    "fecha": "2026-11-14T17:03:16.805360",
    "motivo": "CAMBIO SIGNIFICATIVO: una zona de baja presión dejó de afectar la jurisdicción"
+  },
+  {
+   "fecha": "2026-11-15T04:00:07.442624",
+   "motivo": "cambios acumulados en 3 h: modelo"
   }
  ],
  "imagenes_web": {
   "lluvia": {
-   "src": "lluvia.jpg?v=202611141703",
-   "fecha": "2026-11-14T17:03:20.197819"
+   "src": "lluvia.jpg?v=202611150400",
+   "fecha": "2026-11-15T04:00:11.737429"
   },
   "viento": {
-   "src": "viento.jpg?v=202611141703",
-   "fecha": "2026-11-14T17:03:20.197836"
+   "src": "viento.jpg?v=202611150400",
+   "fecha": "2026-11-15T04:00:11.737455"
   }
  },
- "ultima_publicacion": "2026-11-14T20:44:37.289806",
+ "ultima_publicacion": "2026-11-15T04:00:11.740827",
  "web_tiene_mapas": true
 }
