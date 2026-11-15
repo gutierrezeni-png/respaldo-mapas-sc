@@ -1,8 +1,8 @@
 {
- "two_lm": "Sat, 14 Nov 2026 17:06:57 GMT",
+ "two_lm": "Sat, 14 Nov 2026 23:31:39 GMT",
  "zonas_v": 5,
  "zonas": [],
- "ultima_revision": "2026-11-14T17:03:16.805360",
+ "ultima_revision": "2026-11-14T20:44:35.349869",
  "resumen_actual": {
   "ciclones": {},
   "zonas": []
@@ -19,7 +19,7 @@
  "ultima_imagen": "2026-11-14T17:03:16.805360",
  "motivo_imagen": "CAMBIO SIGNIFICATIVO: una zona de baja presión dejó de afectar la jurisdicción",
  "pendientes": [],
- "decision": "imágenes generadas · respaldo en la nube",
+ "decision": "sin cambios · respaldo en la nube",
  "historial": [
   {
    "fecha": "2026-11-04T20:42:00.632148",
@@ -48,6 +48,6 @@
    "fecha": "2026-11-14T17:03:20.197836"
   }
  },
- "ultima_publicacion": "2026-11-14T17:03:20.201398",
+ "ultima_publicacion": "2026-11-14T20:44:37.289806",
  "web_tiene_mapas": true
 }
